@@ -94,6 +94,33 @@ Test_size  = 33.33%
 
 ### 4. Random Forest Model
 
+Random forest is a tree-based algorithm which involves building several trees (decision trees), then combining their output to improve generalization ability of the model. The method of combining trees is known as an ensemble method. Ensembling is nothing but a combination of weak learners (individual trees) to produce a strong learner.
+
+#### Advantages are as follows:
+<ul>
+<li>It is robust to correlated predictors.</li>
+<li>It is used to solve both regression and classification problems.</li>
+<li>It can be also used to solve unsupervised ML problems.</li>
+<li>It can handle thousands of input variables without variable selection.</li>
+<li>It can be used as a feature selection tool using its variable importance plot.</li>
+<li>It takes care of missing data internally in an effective manner.</li>
+</ul>
+
+#### Disadvantages are as follows:
+
+<ul>
+<li>The Random Forest model is difficult to interpret.</li>
+<li>It tends to return erratic predictions for observations out of range of training data. For example, the training data contains two variable x and  y. The range of x variable is 30 to 70. If the test data has x = 200, random forest would give an unreliable prediction.</li>
+<li>It can take longer than expected time to computer a large number of trees.</li>
+</ul>
+
+Accuracy of the model: 93.0%
+
+Confusion matrix:
+| Predicted->  | 0 | 1 |
+| ------------- | ------------- | ------------- |
+| 0 | 1191 | 0 |
+| 1 | 93 | 119 |
 
 ### 5. Logistic Regression Model
 
@@ -104,10 +131,10 @@ Test_size  = 33.33%
 
 ### 7. Model Comparison
 
-Table with accuracy in percentage of all the models:
+Table with accuracy in percentage of all the models:<br>
 <img src = 'Model table.png' width = "200" height = "100"/>
 
 ### 8. Results
 
-Graphical comparison:
+Graphical comparison:<br>
 <img src = 'Model Comparison.png' width = "400" height = "300"/>
