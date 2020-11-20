@@ -1,11 +1,12 @@
-# Bank Churn Prediction
- 
+# Telco Churn Prediction
+
+This project is about predicting whether a customer will change telecommunications provider, something known as "churning".
+
 ### File descriptions
 
 train.csv - the training set. 
 <br>
 Contains 4250 lines with 20 columns. 3652 samples (85.93%) belong to class churn=no and 598 samples (14.07%) belong to class churn=yes
-
 <br>
 test.csv - the test set. 
 <br>
