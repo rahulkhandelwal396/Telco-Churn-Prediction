@@ -55,7 +55,7 @@ After importing both the training and testing data, we check information about t
 
 As we can see, the data does not contain any null values. There are two types of numerical data in the dataframe - int64 and float64. The categorical data is mentioned against object datatype.
 
-### 1. Data Pre-processing
+### 2. Data Pre-processing
 
 Checking the distribution of the target variable first:
 
@@ -63,7 +63,7 @@ Checking the distribution of the target variable first:
 
 Almost ~86% cases belong to churn=0 case while ~14% cases belong to churn=1 case.
 
-* Defining Categorical columns:
+* Categorical columns:
 
 Used select_dtypes method to take up columns with datatype = object.
 <p>Categorical columns: ['state', 'area_code', 'international_plan', 'voice_mail_plan']</p>
@@ -72,7 +72,7 @@ Preprocessing on categorical columns -> One Hot Encoding
 
 <hr>
 
-* Defining Numerical columns:
+* Numerical columns:
 
 Used select_dtypes method to take up columns with datatype = int64|float64.
 <p>Categorical columns: ['account_length', 'number_vmail_messages', 'total_day_minutes',
@@ -82,4 +82,17 @@ Used select_dtypes method to take up columns with datatype = int64|float64.
        'total_intl_calls', 'total_intl_charge',
        'number_customer_service_calls']</p>
        
-Preprocessing on numerical columns -> Standard Scaling       
+Preprocessing on numerical columns -> Standard Scaling   
+
+A Pipeline method was created to facilitate data preprocessing. Target column 'churn' was label-encoded.
+
+### 2. Train-Test Split
+
+Data was split into training and testing sets using sklearn.model_selection library. 
+Train_size = 66.67%
+Test_size  = 33.33%
+
+### 3. Model Comparison
+
+<img src = 'Model table.png' width = "400" height = "300"/>
+<img src = 'Model Comparison.png' width = "400" height = "300"/>
