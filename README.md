@@ -152,7 +152,15 @@ Confusion matrix:
 
 ### 6. K-Nearest Neighbors Model
 
+Knn is a non-parametric supervised learning technique in which we try to classify the data point to a given category with the help of training set. In simple words, it captures information of all training cases and classifies new cases based on a similarity.
 
+Accuracy of the model: 88.0%
+
+Confusion matrix:
+|  | 0 (Predicted) | 1 (Predicted) |
+| ------------- | ------------- | ------------- |
+| 0 (Actual) | 1181 | 10 |
+| 1 (Actual) | 163 | 49 |
 
 ### 7. Model Comparison
 
@@ -163,3 +171,5 @@ Table with accuracy in percentage of all the models:<br>
 
 Graphical comparison:<br>
 <img src = 'Model Comparison.png' width = "400" height = "300"/>
+
+As we can see, Random Forest model performed the best out of all the models used here.
