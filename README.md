@@ -1,6 +1,6 @@
 # Telco Churn Prediction
 
-<img src = "main-image-telecom-2018.jpeg"/>
+<img src = 'main-image-telecom-2018.png' />
 
 This project is about predicting whether a customer will change telecommunications provider, something known as "churning".
 
