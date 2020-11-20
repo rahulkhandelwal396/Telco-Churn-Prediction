@@ -37,17 +37,17 @@ This project is about predicting whether a customer will change telecommunicatio
 ### Project Flow
 
 <ol>
- <li>Importing and investigating the data.</li>
+ <li>Importing and investigating the data</li>
  <li>Data Pre-processing</li>
  <li>Train-Test Split</li>
  <li>Random Forest Model</li>
  <li>Logistic Regression Model</li>
- <li>K-Nearest Neighbors Model.</li>
- <li>Model Comparison.</li>
+ <li>K-Nearest Neighbors Model</li>
+ <li>Model Comparison</li>
  <li>Results</li>
 </ol>
 
-### 1. Importing and investigating the data.
+### 1. Importing and investigating the data
 
 After importing both the training and testing data, we check information about the train set by calling the .info() method:
 
@@ -66,7 +66,7 @@ Almost ~86% cases belong to churn=0 case while ~14% cases belong to churn=1 case
 * Categorical columns:
 
 Used select_dtypes method to take up columns with datatype = object.
-<p>Categorical columns: ['state', 'area_code', 'international_plan', 'voice_mail_plan']</p>
+<p>['state', 'area_code', 'international_plan', 'voice_mail_plan']</p>
 
 Preprocessing on categorical columns -> One Hot Encoding
 
@@ -75,7 +75,7 @@ Preprocessing on categorical columns -> One Hot Encoding
 * Numerical columns:
 
 Used select_dtypes method to take up columns with datatype = int64|float64.
-<p>Categorical columns: ['account_length', 'number_vmail_messages', 'total_day_minutes',
+<p>['account_length', 'number_vmail_messages', 'total_day_minutes',
        'total_day_calls', 'total_day_charge', 'total_eve_minutes',
        'total_eve_calls', 'total_eve_charge', 'total_night_minutes',
        'total_night_calls', 'total_night_charge', 'total_intl_minutes',
@@ -86,13 +86,28 @@ Preprocessing on numerical columns -> Standard Scaling
 
 A Pipeline method was created to facilitate data preprocessing. Target column 'churn' was label-encoded.
 
-### 2. Train-Test Split
+### 3. Train-Test Split
 
 Data was split into training and testing sets using sklearn.model_selection library. 
 Train_size = 66.67%
 Test_size  = 33.33%
 
-### 3. Model Comparison
+### 4. Random Forest Model
 
-<img src = 'Model table.png' width = "400" height = "300"/>
+
+### 5. Logistic Regression Model
+
+
+### 6. K-Nearest Neighbors Model
+
+
+
+### 7. Model Comparison
+
+Table with accuracy in percentage of all the models:
+<img src = 'Model table.png' width = "200" height = "100"/>
+
+### 8. Results
+
+Graphical comparison:
 <img src = 'Model Comparison.png' width = "400" height = "300"/>
