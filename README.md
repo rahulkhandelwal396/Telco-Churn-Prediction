@@ -2,6 +2,16 @@
 
 This project is about predicting whether a customer will change telecommunications provider, something known as "churning".
 
+This project is about predicting whether a customer will change telecommunications provider, something known as “churning”.
+Customer churn is the percentage of customers that stopped using your company’s product or service during a certain time frame.
+
+### Why Is Customer Churn Rate Important?
+
+To learn why this is the case, we need to understand that it costs more to acquire new customers than it does to retain existing customers.
+In fact, an increase in customer retention of just 5% can create at least a 25% increase in profit. This is because returning customers will likely spend 67% more on your company’s products and services. As a result, your company can spend less on the operating costs of having to acquire new customers. You don’t need to spend time and money on convincing an existing customer to select your company over competitors because they’ve already made that decision.
+
+Source: https://blog.hubspot.com/service/what-is-customer-churn
+
 ### File descriptions
 
 <ul>
@@ -33,3 +43,159 @@ This project is about predicting whether a customer will change telecommunicatio
 | total_intl_charge  | numerical. Total charge of international calls  |
 | number_customer_service_calls  | numerical. Number of calls to customer service  |
 | churn  | Customer churn - target variable. |
+
+### Project Flow
+
+<ol>
+ <li>Importing and investigating the data</li>
+ <li>Data Pre-processing</li>
+ <li>Train-Test Split</li>
+ <li>Random Forest Model</li>
+ <li>Logistic Regression Model</li>
+ <li>K-Nearest Neighbors Model</li>
+ <li>Model Comparison</li>
+ <li>Results</li>
+</ol>
+
+### 1. Importing and investigating the data
+
+After importing both the training and testing data, we check information about the train set by calling the .info() method:
+
+<img src = 'train_info.png' width = "400" height = "300"/>
+
+As we can see, the data does not contain any null values. There are two types of numerical data in the dataframe - int64 and float64. The categorical data is mentioned against object datatype.
+
+### 2. Data Pre-processing
+
+Checking the distribution of the target variable first:
+
+<img src = 'churn_barplot.png' width = "400" height = "300"/>
+
+Almost ~86% cases belong to churn=0 case while ~14% cases belong to churn=1 case.
+
+* Categorical columns:
+
+Used select_dtypes method to take up columns with datatype = object.
+<p>['state', 'area_code', 'international_plan', 'voice_mail_plan']</p>
+
+Preprocessing on categorical columns -> One Hot Encoding
+
+* Numerical columns:
+
+Used select_dtypes method to take up columns with datatype = int64|float64.
+<p>['account_length', 'number_vmail_messages', 'total_day_minutes',
+       'total_day_calls', 'total_day_charge', 'total_eve_minutes',
+       'total_eve_calls', 'total_eve_charge', 'total_night_minutes',
+       'total_night_calls', 'total_night_charge', 'total_intl_minutes',
+       'total_intl_calls', 'total_intl_charge',
+       'number_customer_service_calls']</p>
+       
+Preprocessing on numerical columns -> Standard Scaling   
+
+A Pipeline method was created to facilitate data preprocessing. Target column 'churn' was label-encoded.
+
+### 3. Train-Test Split
+
+Data was split into training and testing sets using sklearn.model_selection library. 
+Train_size = 66.67%
+Test_size  = 33.33%
+
+### 4. Random Forest Model
+
+Random forest is a tree-based algorithm which involves building several trees (decision trees), then combining their output to improve generalization ability of the model. The method of combining trees is known as an ensemble method. Ensembling is nothing but a combination of weak learners (individual trees) to produce a strong learner.
+
+#### Advantages are as follows:
+<ul>
+<li>It is robust to correlated predictors.</li>
+<li>It is used to solve both regression and classification problems.</li>
+<li>It can be also used to solve unsupervised ML problems.</li>
+<li>It can handle thousands of input variables without variable selection.</li>
+<li>It can be used as a feature selection tool using its variable importance plot.</li>
+<li>It takes care of missing data internally in an effective manner.</li>
+</ul>
+
+#### Disadvantages are as follows:
+
+<ul>
+<li>The Random Forest model is difficult to interpret.</li>
+<li>It tends to return erratic predictions for observations out of range of training data. For example, the training data contains two variable x and  y. The range of x variable is 30 to 70. If the test data has x = 200, random forest would give an unreliable prediction.</li>
+<li>It can take longer than expected time to computer a large number of trees.</li>
+</ul>
+
+Accuracy of the model: 93.0%
+
+Confusion matrix:
+|  | 0 (Predicted) | 1 (Predicted) |
+| ------------- | ------------- | ------------- |
+| 0 (Actual) | 1191 | 0 |
+| 1 (Actual) | 93 | 119 |
+
+### 5. Logistic Regression Model
+
+Logistic Regression belongs to the family of generalized linear models. It is a binary classification algorithm used when the response variable is dichotomous (1 or 0). Inherently, it returns the set of probabilities of target class. But, we can also obtain response labels using a probability threshold value. 
+
+#### Advantages are as follows:
+
+<ul>
+<li>Logistic Regression is one of the simplest machine learning algorithms and is easy to implement yet provides great training efficiency in some cases. Also due to these reasons, training a model with this algorithm doesn't require high computation power.</li>
+<li>In a low dimensional dataset having a sufficient number of training examples, logistic regression is less prone to over-fitting.</li>
+<li>Logistic Regression proves to be very efficient when the dataset has features that are linearly separable.</li>
+<li>The predicted parameters (trained weights) give inference about the importance of each feature. The direction of association i.e. positive or negative is also given. So we can use logistic regression to find out the relationship between the features.</li>
+<li>This algorithm can easily be extended to multi-class classification using a softmax classifier, this is known as Multinomial Logistic Regression.</li>
+</ul>
+
+#### Disadvantages are as follows:
+
+<ul>
+<li>In Linear Regression independent and dependent variables should be related linearly. But Logistic Regression requires that independent variables are linearly related to the log odds (log(p/(1-p)).</li>
+<li>Only important and relevant features should be used to build a model otherwise the probabilistic predictions made by the model may be incorrect and the model's predictive value may degrade.</li>
+<li>The presence of data values that deviate from the expected range in the dataset may lead to incorrect results as this algorithm is sensitive to outliers.</li>
+</ul>
+
+Accuracy of the model: 86.0%
+
+Confusion matrix:
+|  | 0 (Predicted) | 1 (Predicted) |
+| ------------- | ------------- | ------------- |
+| 0 (Actual) | 1167 | 24 |
+| 1 (Actual) | 166 | 46 |
+
+### 6. K-Nearest Neighbors Model
+
+Knn is a non-parametric supervised learning technique in which we try to classify the data point to a given category with the help of training set. In simple words, it captures information of all training cases and classifies new cases based on a similarity.
+
+Accuracy of the model: 88.0%
+
+Confusion matrix:
+|  | 0 (Predicted) | 1 (Predicted) |
+| ------------- | ------------- | ------------- |
+| 0 (Actual) | 1181 | 10 |
+| 1 (Actual) | 163 | 49 |
+
+### 7. Model Comparison
+
+Table with accuracy in percentage of all the models:<br>
+<img src = 'Model table.png' width = "200" height = "100"/>
+
+### 8. Results
+
+Graphical comparison:<br>
+<img src = 'Model Comparison.png' width = "400" height = "300"/>
+
+As we can see, Random Forest model performed the best out of all the models used here.
+
+## Ways to Reduce Customer Churn
+
+Source: https://blog.hubspot.com/service/what-is-customer-churn
+
+1. Focus your attention on your best customers.
+
+Rather than simply focusing on offering incentives to customers who are considering churning, it could be even more beneficial to pool your resources into your loyal, profitable customers.
+
+2. Analyze churn as it occurs.
+
+Use your churned customers as a means of understanding why customers are leaving. Analyze how and when churn occurs in a customer’s lifetime with your company, and use that data to put into place preemptive measures.
+
+3. Show your customers that you care.
+
+Instead of waiting to connect with your customers until they reach out to you, try a more proactive approach. Communicate with them all the perks you offer and show them you care about their experience, and they’ll be sure to stick around.
