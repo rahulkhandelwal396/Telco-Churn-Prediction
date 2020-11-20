@@ -51,4 +51,4 @@ This project is about predicting whether a customer will change telecommunicatio
 
 After importing both the training and testing data, we check information about the train set by calling the .info() method:
 
-<img src = 'train_info.csv' width = "400" height = "300"/>
+<img src = 'train_info.png' width = "400" height = "300"/>
