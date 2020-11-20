@@ -124,7 +124,31 @@ Confusion matrix:
 
 Logistic Regression belongs to the family of generalized linear models. It is a binary classification algorithm used when the response variable is dichotomous (1 or 0). Inherently, it returns the set of probabilities of target class. But, we can also obtain response labels using a probability threshold value. 
 
+#### Advantages are as follows:
 
+<ul>
+<li>Logistic Regression is one of the simplest machine learning algorithms and is easy to implement yet provides great training efficiency in some cases. Also due to these reasons, training a model with this algorithm doesn't require high computation power.</li>
+<li>In a low dimensional dataset having a sufficient number of training examples, logistic regression is less prone to over-fitting.</li>
+<li>Logistic Regression proves to be very efficient when the dataset has features that are linearly separable.</li>
+<li>The predicted parameters (trained weights) give inference about the importance of each feature. The direction of association i.e. positive or negative is also given. So we can use logistic regression to find out the relationship between the features.</li>
+<li>This algorithm can easily be extended to multi-class classification using a softmax classifier, this is known as Multinomial Logistic Regression.</li>
+</ul>
+
+#### Disadvantages are as follows:
+
+<ul>
+<li>In Linear Regression independent and dependent variables should be related linearly. But Logistic Regression requires that independent variables are linearly related to the log odds (log(p/(1-p)).</li>
+<li>Only important and relevant features should be used to build a model otherwise the probabilistic predictions made by the model may be incorrect and the model's predictive value may degrade.</li>
+<li>The presence of data values that deviate from the expected range in the dataset may lead to incorrect results as this algorithm is sensitive to outliers.</li>
+</ul>
+
+Accuracy of the model: 86.0%
+
+Confusion matrix:
+|  | 0 (Predicted) | 1 (Predicted) |
+| ------------- | ------------- | ------------- |
+| 0 (Actual) | 1167 | 24 |
+| 1 (Actual) | 166 | 46 |
 
 ### 6. K-Nearest Neighbors Model
 
