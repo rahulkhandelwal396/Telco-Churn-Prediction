@@ -70,8 +70,6 @@ Used select_dtypes method to take up columns with datatype = object.
 
 Preprocessing on categorical columns -> One Hot Encoding
 
-<hr>
-
 * Numerical columns:
 
 Used select_dtypes method to take up columns with datatype = int64|float64.
@@ -117,12 +115,15 @@ Random forest is a tree-based algorithm which involves building several trees (d
 Accuracy of the model: 93.0%
 
 Confusion matrix:
-| Predicted->  | 0 | 1 |
+|  | 0 (Predicted) | 1 (Predicted) |
 | ------------- | ------------- | ------------- |
-| 0 | 1191 | 0 |
-| 1 | 93 | 119 |
+| 0 (Actual) | 1191 | 0 |
+| 1 (Actual) | 93 | 119 |
 
 ### 5. Logistic Regression Model
+
+Logistic Regression belongs to the family of generalized linear models. It is a binary classification algorithm used when the response variable is dichotomous (1 or 0). Inherently, it returns the set of probabilities of target class. But, we can also obtain response labels using a probability threshold value. 
+
 
 
 ### 6. K-Nearest Neighbors Model
