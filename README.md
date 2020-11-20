@@ -33,3 +33,22 @@ This project is about predicting whether a customer will change telecommunicatio
 | total_intl_charge  | numerical. Total charge of international calls  |
 | number_customer_service_calls  | numerical. Number of calls to customer service  |
 | churn  | Customer churn - target variable. |
+
+### Project Flow
+
+<ol>
+ <li>Importing and investigating the data.</li>
+ <li>Data Pre-processing</li>
+ <li>Train-Test Split</li>
+ <li>Random Forest Model</li>
+ <li>Logistic Regression Model</li>
+ <li>K-Nearest Neighbors Model.</li>
+ <li>Model Comparison.</li>
+ <li>Results</li>
+</ol>
+
+### 1. Importing and investigating the data.
+
+After importing both the training and testing data, we check information about the train set by calling the .info() method:
+
+<img src = 'train_info.csv' width = 400 height = 300/>
