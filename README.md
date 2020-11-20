@@ -52,3 +52,32 @@ This project is about predicting whether a customer will change telecommunicatio
 After importing both the training and testing data, we check information about the train set by calling the .info() method:
 
 <img src = 'train_info.png' width = "400" height = "300"/>
+
+As we can see, the data does not contain any null values. There are two types of numerical data in the dataframe - int64 and float64. The categorical data is mentioned against object datatype.
+
+### 1. Data Pre-processing
+
+Checking the distribution of the target variable first:
+
+<img src = 'churn_barplot.png' width = "400" height = "300"/>
+
+Almost ~86% cases belong to churn=0 case while ~14% cases belong to churn=1 case.
+
+* Defining Categorical columns:
+
+Used select_dtypes method to take up columns with datatype = object.
+<p>Categorical columns: ['state', 'area_code', 'international_plan', 'voice_mail_plan']</p>
+
+*One Hot Encoding:
+
+<hr>
+
+* Defining Numerical columns:
+
+Used select_dtypes method to take up columns with datatype = int64|float64.
+<p>Categorical columns: ['account_length', 'number_vmail_messages', 'total_day_minutes',
+       'total_day_calls', 'total_day_charge', 'total_eve_minutes',
+       'total_eve_calls', 'total_eve_charge', 'total_night_minutes',
+       'total_night_calls', 'total_night_charge', 'total_intl_minutes',
+       'total_intl_calls', 'total_intl_charge',
+       'number_customer_service_calls']</p>
