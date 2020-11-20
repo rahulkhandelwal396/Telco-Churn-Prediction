@@ -68,7 +68,7 @@ Almost ~86% cases belong to churn=0 case while ~14% cases belong to churn=1 case
 Used select_dtypes method to take up columns with datatype = object.
 <p>Categorical columns: ['state', 'area_code', 'international_plan', 'voice_mail_plan']</p>
 
-*One Hot Encoding:
+Preprocessing on categorical columns -> One Hot Encoding
 
 <hr>
 
@@ -81,3 +81,5 @@ Used select_dtypes method to take up columns with datatype = int64|float64.
        'total_night_calls', 'total_night_charge', 'total_intl_minutes',
        'total_intl_calls', 'total_intl_charge',
        'number_customer_service_calls']</p>
+       
+Preprocessing on numerical columns -> Standard Scaling       
