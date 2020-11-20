@@ -2,6 +2,16 @@
 
 This project is about predicting whether a customer will change telecommunications provider, something known as "churning".
 
+This project is about predicting whether a customer will change telecommunications provider, something known as “churning”.
+Customer churn is the percentage of customers that stopped using your company’s product or service during a certain time frame.
+
+### Why Is Customer Churn Rate Important?
+
+To learn why this is the case, we need to understand that it costs more to acquire new customers than it does to retain existing customers.
+In fact, an increase in customer retention of just 5% can create at least a 25% increase in profit. This is because returning customers will likely spend 67% more on your company’s products and services. As a result, your company can spend less on the operating costs of having to acquire new customers. You don’t need to spend time and money on convincing an existing customer to select your company over competitors because they’ve already made that decision.
+
+Source: https://blog.hubspot.com/service/what-is-customer-churn
+
 ### File descriptions
 
 <ul>
@@ -173,3 +183,19 @@ Graphical comparison:<br>
 <img src = 'Model Comparison.png' width = "400" height = "300"/>
 
 As we can see, Random Forest model performed the best out of all the models used here.
+
+## Ways to Reduce Customer Churn
+
+Source: https://blog.hubspot.com/service/what-is-customer-churn
+
+1. Focus your attention on your best customers.
+
+Rather than simply focusing on offering incentives to customers who are considering churning, it could be even more beneficial to pool your resources into your loyal, profitable customers.
+
+2. Analyze churn as it occurs.
+
+Use your churned customers as a means of understanding why customers are leaving. Analyze how and when churn occurs in a customer’s lifetime with your company, and use that data to put into place preemptive measures.
+
+3. Show your customers that you care.
+
+Instead of waiting to connect with your customers until they reach out to you, try a more proactive approach. Communicate with them all the perks you offer and show them you care about their experience, and they’ll be sure to stick around.
