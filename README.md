@@ -132,6 +132,20 @@ Confusion matrix:
 | 0 (Actual) | 1191 | 0 |
 | 1 (Actual) | 93 | 119 |
 
+### Feature Importance
+
+There are two types of feature importances that can be calculated in case of random forest model. Impurity based feature importance and permutation based feature importance.
+
+As we have one hot encoded the categorical columns, we have increased the number of features in our data from 19 to 79, and this will give a distorted understanding of feature importances of the variables.
+
+Furthermore, impurity-based importances are computed on training set statistics and therefore do not reflect the ability of feature to be useful to make predictions that generalize to the test set.
+
+Hence, we will use permutation_importance method.
+
+The permutation_importance method will be permuting categorical columns before they get one-hot encoded.
+
+<img src = "Feature Importances.png" />
+
 ### 5. Logistic Regression Model
 
 Logistic Regression belongs to the family of generalized linear models. It is a binary classification algorithm used when the response variable is dichotomous (1 or 0). Inherently, it returns the set of probabilities of target class. But, we can also obtain response labels using a probability threshold value. 
