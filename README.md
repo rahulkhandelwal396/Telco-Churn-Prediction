@@ -144,7 +144,7 @@ Hence, we will use permutation_importance method.
 
 The permutation_importance method will be permuting categorical columns before they get one-hot encoded.
 
-<img src = "Feature Importance.png" />
+<img src = "Feature Importances.png" />
 
 ### 5. Logistic Regression Model
 
