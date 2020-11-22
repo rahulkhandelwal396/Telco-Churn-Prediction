@@ -127,7 +127,7 @@ Random forest is ensemble machine learning algorithm which builds a combination 
 <li>It performs well in case of unbalanced class prediction problem.</li>
 </ul>
 
-### Disadvantages are as follows:
+### Disadvantages of Random Forest Model:
 <ul>
 <li>The Random Forest model is difficult to interpret.</li>
 <li>For large datasets with too many features, the random forest model consumes a lot of memory.</li>
@@ -172,7 +172,7 @@ The model basically applies sigmoid function to the output of a linear regressio
 <li>This algorithm can easily be extended to multi-class classification using a SoftMax function, which is known as Multinomial Logistic Regression.</li>
 </ul>
   
-### Disadvantages are as follows:
+### Disadvantages of Logistic Regression Model:
 <ul>
 <li>Logistic Regression requires that the independent variable should be linearly related to the log odds (log(p/(1-p)).</li>
 <li>The algorithm is only able to build linear decision boundaries to separate data of different classes. This means that problems involving formation of non-linear boundaries cannot be solved by this algorithm.</li>
