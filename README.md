@@ -10,9 +10,9 @@ Customer churn is the percentage of customers that stopped using your company’
 ### Why Is Customer Churn Rate Important?
 
 To learn why this is the case, we need to understand that it costs more to acquire new customers than it does to retain existing customers.
-In fact, an increase in customer retention of just 5% can create at least a 25% increase in profit. This is because returning customers will likely spend 67% more on your company’s products and services. As a result, your company can spend less on the operating costs of having to acquire new customers. You don’t need to spend time and money on convincing an existing customer to select your company over competitors because they’ve already made that decision.
+CAC is defined as the net cost of sales and marketing required to aquire a new customer. Regardless of the efforts a company puts in terms of effectiveness of it’s marketing campaign or providing more and more services to it’s customers at a cheap cost, there would be some customers who would inevitably tend to churn out of their system. There can be several reasons for this, like, a customer may tend to sway towards a competitor offering similar services at a lower cost or they may be providing tailor-made plans to customer which would be better suited to their needs.
 
-Source: https://blog.hubspot.com/service/what-is-customer-churn
+For acquiring every new customer, the cost associated with this (CAC) tends to be far more than that associated with keeping a customer into the system of a company. Moreover, by keeping overall customer management costs low, a company can focus it’s time and effort into improving the features of their product and the quality of their services, which will ultimately improve the health of the company financially.
 
 ### File descriptions
 
@@ -200,18 +200,28 @@ Graphical comparison:<br>
 
 As we can see, Random Forest model performed the best out of all the models used here.
 
+## Other Key Indicators to look out for
+
+1. Pricing points of competitors and their subscription models
+How the competitors have designed their subscription model ? What are the time spans for which they offer their services? How are these models priced?
+
+2. Customer behaviour pattern
+How likely are the customers to exit the system based on the frequency of usage of services of the company by customers? How does their behaviour change if the company tweaks their price point or the model of subscription/quality of it’s services? How do they react if the company provides additional servies like Amazon Prime Video or Netflix subscription along with it’s package?
+
+3. Competitor reaction
+How did the competition react to changes made by the company or by a change in market conditions? Did they offer discounts on thier services or include more services into their product line by incorporating newer technologies or partnering with other firms to get more product support?
+
 ## Ways to Reduce Customer Churn
 
-Source: https://blog.hubspot.com/service/what-is-customer-churn
+1. Focussing attention towards your better customers
+Instead of spending huge amount of resources to try to incentivize the customers who are likely to churn based on customer behaviour analysis, it is better for the company to spend those resources on it’s existing customers. This will not only ensure customer loyalty but will also create meaningful long term relationship with those customers.
 
-1. Focus your attention on your best customers.
+2. Analyzing customer churn pattern
+Analyzing the churn pattern of customers is the key method by which it can understand which customers are about to leave and which features of a company’s product are most important to the customers. It may be possible that customers prefer all: low, medium and high valued products or subscriptions that would be suitable to them according to their needs or they may also prefer only low valued products. Changing churn behaviour of customers when pricing or features of products are changed along with time is also an essential analysis that must be done by the company.
 
-Rather than simply focusing on offering incentives to customers who are considering churning, it could be even more beneficial to pool your resources into your loyal, profitable customers.
+3. Developing a grievance redressal system
+While using a company’s products, it is very likely that they will have some issues with them at some point of time. Therefore, it is extremely essential that a company install a feedback system and also create a system of fast and reliable customer service. These things add up a lot to increase the overall customer experience over long durations of time.
 
-2. Analyze churn as it occurs.
-
-Use your churned customers as a means of understanding why customers are leaving. Analyze how and when churn occurs in a customer’s lifetime with your company, and use that data to put into place preemptive measures.
-
-3. Show your customers that you care.
-
-Instead of waiting to connect with your customers until they reach out to you, try a more proactive approach. Communicate with them all the perks you offer and show them you care about their experience, and they’ll be sure to stick around.
+4. Creating a new subscription model and improving renewal system
+While a company may have designed their products and subscription models to tend to the need of it’s customers, it may be better off it can provide more tailor made packages and features to it’s customers. This will ensure that they get to pay only for the services that they actually need and do not end up paying extravagantly for services they have no use for.
+The company should also focus on improving it’s renewal model by providing flexibility to it’s customers for auto-renewal or change of subscription plan during run-period of subscription of an already subscribed plan.
