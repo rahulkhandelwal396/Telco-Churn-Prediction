@@ -114,24 +114,25 @@ Test_size  = 33.33%
 
 ### 4. Random Forest Model
 
-Random forest is a tree-based algorithm which involves building several trees (decision trees), then combining their output to improve generalization ability of the model. The method of combining trees is known as an ensemble method. Ensembling is nothing but a combination of weak learners (individual trees) to produce a strong learner.
+Random forest is ensemble machine learning algorithm which builds a combination of several decision trees. The decision trees themselves are weak learners but when they are ensembled by the random forest algorithm, the predictive power of the algorithm is increased significantly and the model also generalizes better on unseen data. The trees are built by taking samples of data, with replacement from the original data. Each tree is grown to it’s maximum depth level and there is no pruning in the trees.
 
-#### Advantages are as follows:
+### Advantages of Random Forest Model:
 <ul>
-<li>It is robust to correlated predictors.</li>
-<li>It is used to solve both regression and classification problems.</li>
-<li>It can be also used to solve unsupervised ML problems.</li>
-<li>It can handle thousands of input variables without variable selection.</li>
-<li>It can be used as a feature selection tool using its variable importance plot.</li>
-<li>It takes care of missing data internally in an effective manner.</li>
+<li>It has a very high accuracy generally compared to the conventional machine learning algorithms.</li>
+<li>It does not overfit on training data.</li>
+<li>It can be run on large datasets and is also able to handle thousands of input variables without needing explicit variable selection methods.</li>
+<li>It is can solve both regression and classification problems.</li>
+<li>It can be used to select important features which play a major role in determining the target variable by use of the feature importance plot.</li>
+<li>It can handle missing data by estimation of the missing values and the algorithm performs robustly even when a large proportion of data points are missing.</li>
+<li>It performs well in case of unbalanced class prediction problem.</li>
 </ul>
 
-#### Disadvantages are as follows:
-
+### Disadvantages are as follows:
 <ul>
 <li>The Random Forest model is difficult to interpret.</li>
-<li>It tends to return erratic predictions for observations out of range of training data. For example, the training data contains two variable x and  y. The range of x variable is 30 to 70. If the test data has x = 200, random forest would give an unreliable prediction.</li>
-<li>It can take longer than expected time to computer a large number of trees.</li>
+<li>For large datasets with too many features, the random forest model consumes a lot of memory.</li>
+<li>The algorithm produces wild predictions for test observations never seen before by the training data. For example, for a training data containing two variables x and y with the range of x variable from 50 to 80: If the test data has x = 150, the algorithm would give an unreliable prediction.</li>
+<li>It takes tong time to run as it build a large number of trees.</li>
 </ul>
 
 Accuracy of the model: 93.0%
@@ -158,24 +159,26 @@ The permutation_importance method will be permuting categorical columns before t
 
 ### 5. Logistic Regression Model
 
-Logistic Regression belongs to the family of generalized linear models. It is a binary classification algorithm used when the response variable is dichotomous (1 or 0). Inherently, it returns the set of probabilities of target class. But, we can also obtain response labels using a probability threshold value. 
+Logistic regression is a classification algorithm which belongs to the family of generalized linear models. It is a used when the response variable is binary (1 or 0). The model returns the probability of occurrence of the target variable which is converted to 0 or 1 prediction using a particular threshold.
+The model basically applies sigmoid function to the output of a linear regression model.
 
-#### Advantages are as follows:
-
+### Advantages of Logistic Regression Model:
 <ul>
-<li>Logistic Regression is one of the simplest machine learning algorithms and is easy to implement yet provides great training efficiency in some cases. Also due to these reasons, training a model with this algorithm doesn't require high computation power.</li>
-<li>In a low dimensional dataset having a sufficient number of training examples, logistic regression is less prone to over-fitting.</li>
-<li>Logistic Regression proves to be very efficient when the dataset has features that are linearly separable.</li>
-<li>The predicted parameters (trained weights) give inference about the importance of each feature. The direction of association i.e. positive or negative is also given. So we can use logistic regression to find out the relationship between the features.</li>
-<li>This algorithm can easily be extended to multi-class classification using a softmax classifier, this is known as Multinomial Logistic Regression.</li>
-</ul>
-
-#### Disadvantages are as follows:
-
+<li>Logistic Regression is one of the simplest and easy to interpret machine learning algorithms.</li>
+<li>It does not require very high computational power or memory.</li>
+<li>It is less prone to over-fitting in a low dimensional dataset having a sufficient number of training examples.</li>
+<li>It makes no assumptions about the distribution of the classes in the data.</li>
+<li>The predicted parameters (trained weights) give inference about the importance of each feature. The direction of association i.e. positive or negative is also given. his can be used to understand the relationship between various features.</li>
+<li>This algorithm can easily be extended to multi-class classification using a SoftMax function, which is known as Multinomial Logistic Regression.</li>
 <ul>
-<li>In Linear Regression independent and dependent variables should be related linearly. But Logistic Regression requires that independent variables are linearly related to the log odds (log(p/(1-p)).</li>
-<li>Only important and relevant features should be used to build a model otherwise the probabilistic predictions made by the model may be incorrect and the model's predictive value may degrade.</li>
-<li>The presence of data values that deviate from the expected range in the dataset may lead to incorrect results as this algorithm is sensitive to outliers.</li>
+  
+### Disadvantages are as follows:
+<ul>
+<li>Logistic Regression requires that the independent variable should be linearly related to the log odds (log(p/(1-p)).</li>
+<li>The algorithm is only able to build linear decision boundaries to separate data of different classes. This means that problems involving formation of non-linear boundaries cannot be solved by this algorithm.</li>
+<li>Adding too many features to the model which may suffer from multicollinearity can degrade the predictive power of the model.</li>
+<li>More powerful algorithms like Neural Networks, SVM, Random Forest can easily outperform this algorithm.</li>
+<li>The algorithm is sensitive to outliers and as such when the data values deviate from expected ranges, this can lead to erratic classification of the data point which may affect the overall accuracy and interpretability of the model as it would also affect the Sensitivity and Specificity of the results of the algorithm.</li>
 </ul>
 
 Accuracy of the model: 86.0%
@@ -188,7 +191,9 @@ Confusion matrix:
 
 ### 6. K-Nearest Neighbors Model
 
-Knn is a non-parametric supervised learning technique in which we try to classify the data point to a given category with the help of training set. In simple words, it captures information of all training cases and classifies new cases based on a similarity.
+KNN is a simple and easy to interpret supervised machine learning algorithm that can be used to solve both classification and regression problems. The algorithm works by trying to determine the class of a data point by looking at the class of it’s K nearest neighbors. It assumes that data points which are close to each other belong to the same class and uses a distance metric like Euclidean distance or other metric to find the distance between data points. KNN is a non-linear classifier, so it will work with data that cannot be simply classified with the help of linear classifiers.
+
+However, it does not perform well if the dataset is too large or has too many features. The model also requires feature scaling as features of different scales can give a distorted picture of distance between data points. It is also sensitive to missing data and presence of outliers.
 
 Accuracy of the model: 88.0%
 
