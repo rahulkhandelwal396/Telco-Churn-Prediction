@@ -83,7 +83,7 @@ Used select_dtypes method to take up columns with datatype = object.
 EDA on categorical variables
 Countplots were built using seaborn’s countplot method to understand distribution of categorical variables.
 
-<img src = 'counplot.png' width = "400" height = "300"/>
+<img src = 'countplot.png' width = "400" height = "300"/>
 
 Preprocessing on categorical columns -> One Hot Encoding
 
