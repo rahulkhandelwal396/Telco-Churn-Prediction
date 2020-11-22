@@ -80,6 +80,11 @@ Almost ~86% cases belong to churn=0 case while ~14% cases belong to churn=1 case
 Used select_dtypes method to take up columns with datatype = object.
 <p>['state', 'area_code', 'international_plan', 'voice_mail_plan']</p>
 
+EDA on categorical variables
+Countplots were built using seaborn’s countplot method to understand distribution of categorical variables.
+
+<img src = 'counplot.png' width = "400" height = "300"/>
+
 Preprocessing on categorical columns -> One Hot Encoding
 
 * Numerical columns:
@@ -92,6 +97,11 @@ Used select_dtypes method to take up columns with datatype = int64|float64.
        'total_intl_calls', 'total_intl_charge',
        'number_customer_service_calls']</p>
        
+EDA on numerical columns
+This is a correlation matrix plot to understand distribution of correlation between the numerical variables. As we can see from the plot, most of the variables are not too much related with each other, except for the varaibles that account for total minutes of day, evening, night and international calls with their charges, something which is to be expected of the nature of data we are dealing with.
+
+<img src = 'correlation_plot.png' width = "400" height = "300"/>
+
 Preprocessing on numerical columns -> Standard Scaling   
 
 A Pipeline method was created to facilitate data preprocessing. Target column 'churn' was label-encoded.
