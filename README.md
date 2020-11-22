@@ -170,7 +170,7 @@ The model basically applies sigmoid function to the output of a linear regressio
 <li>It makes no assumptions about the distribution of the classes in the data.</li>
 <li>The predicted parameters (trained weights) give inference about the importance of each feature. The direction of association i.e. positive or negative is also given. his can be used to understand the relationship between various features.</li>
 <li>This algorithm can easily be extended to multi-class classification using a SoftMax function, which is known as Multinomial Logistic Regression.</li>
-<ul>
+</ul>
   
 ### Disadvantages are as follows:
 <ul>
@@ -220,23 +220,23 @@ As we can see, Random Forest model performed the best out of all the models used
 1. Pricing points of competitors and their subscription models
 How the competitors have designed their subscription model ? What are the time spans for which they offer their services? How are these models priced?
 
-2. Customer behaviour pattern
-How likely are the customers to exit the system based on the frequency of usage of services of the company by customers? How does their behaviour change if the company tweaks their price point or the model of subscription/quality of it’s services? How do they react if the company provides additional servies like Amazon Prime Video or Netflix subscription along with it’s package?
+2. Customer behavior pattern
+How likely are the customers to exit the system based on the frequency of usage of services of the company by customers? How does their behavior change if the company tweaks their price point or the model of subscription/quality of it’s services? How do they react if the company provides additional services like Amazon Prime Video or Netflix subscription along with it’s package?
 
 3. Competitor reaction
-How did the competition react to changes made by the company or by a change in market conditions? Did they offer discounts on thier services or include more services into their product line by incorporating newer technologies or partnering with other firms to get more product support?
+How did the competition react to changes made by the company or by a change in market conditions? Did they offer discounts on their services or include more services into their product line by incorporating newer technologies or partnering with other firms to get more product support?
 
 ## Ways to Reduce Customer Churn
 
 1. Focussing attention towards your better customers
-Instead of spending huge amount of resources to try to incentivize the customers who are likely to churn based on customer behaviour analysis, it is better for the company to spend those resources on it’s existing customers. This will not only ensure customer loyalty but will also create meaningful long term relationship with those customers.
+Instead of spending huge amount of resources to try to incentivize the customers who are likely to churn based on customer behavior analysis, it is better for the company to spend those resources on it’s existing customers. This will not only ensure customer loyalty but will also create meaningful long term relationship with those customers.
 
 2. Analyzing customer churn pattern
-Analyzing the churn pattern of customers is the key method by which it can understand which customers are about to leave and which features of a company’s product are most important to the customers. It may be possible that customers prefer all: low, medium and high valued products or subscriptions that would be suitable to them according to their needs or they may also prefer only low valued products. Changing churn behaviour of customers when pricing or features of products are changed along with time is also an essential analysis that must be done by the company.
+Analyzing the churn pattern of customers is the key method by which it can understand which customers are about to leave and which features of a company’s product are most important to the customers. It may be possible that customers prefer all: low, medium and high valued products or subscriptions that would be suitable to them according to their needs or they may also prefer only low valued products. Changing churn behavior of customers when pricing or features of products are changed along with time is also an essential analysis that must be done by the company.
 
 3. Developing a grievance redressal system
 While using a company’s products, it is very likely that they will have some issues with them at some point of time. Therefore, it is extremely essential that a company install a feedback system and also create a system of fast and reliable customer service. These things add up a lot to increase the overall customer experience over long durations of time.
 
 4. Creating a new subscription model and improving renewal system
-While a company may have designed their products and subscription models to tend to the need of it’s customers, it may be better off it can provide more tailor made packages and features to it’s customers. This will ensure that they get to pay only for the services that they actually need and do not end up paying extravagantly for services they have no use for.
+While a company may have designed their products and subscription models to tend to the need of it’s customers, it may be better off if it can provide more tailor made packages and features to it’s customers. This will ensure that they get to pay only for the services that they actually need and do not end up paying extravagantly for services they have no use for.
 The company should also focus on improving it’s renewal model by providing flexibility to it’s customers for auto-renewal or change of subscription plan during run-period of subscription of an already subscribed plan.
